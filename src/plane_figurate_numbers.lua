@@ -516,4 +516,12 @@ function plane_figurate_numbers.aztec_diamond_numbers()
   end)
 end
 
+function plane_figurate_numbers.polygram_numbers(m)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(m * delta ^ 2 - m * delta + 1)
+    end
+  end)
+end
+
 return plane_figurate_numbers

@@ -478,4 +478,8 @@ function plane_figurate_numbers.pronic_numbers()
   end)
 end
 
+-- alias
+plane_figurate_numbers.heteromecic_numbers = plane_figurate_numbers.pronic_numbers
+plane_figurate_numbers.oblong_numbers = plane_figurate_numbers.pronic_numbers
+
 return plane_figurate_numbers

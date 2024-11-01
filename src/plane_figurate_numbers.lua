@@ -484,7 +484,8 @@ local math = require("math")
 function plane_figurate_numbers.polite_numbers()
   return coroutine.wrap(function()
     for delta = 1, math.huge do
-      coroutine.yield(delta + math.floor(math.log(delta + math.log(delta, 2), 2)))
+      -- I had to add one more operation to logarithms in Lua
+      coroutine.yield(delta + math.floor(math.log(delta + math.log(delta) / math.log(2)) / math.log(2)))
     end
   end)
 end

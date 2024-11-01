@@ -248,7 +248,6 @@ function plane_figurate_numbers.centered_square_numbers()
   end)
 end
 
--- alias
 plane_figurate_numbers.diamond_numbers = plane_figurate_numbers.centered_square_numbers
 
 function plane_figurate_numbers.centered_pentagonal_numbers()
@@ -315,7 +314,6 @@ function plane_figurate_numbers.centered_dodecagonal_numbers()
   end)
 end
 
--- alias
 plane_figurate_numbers.star_numbers = plane_figurate_numbers.centered_dodecagonal_numbers
 
 function plane_figurate_numbers.centered_tridecagonal_numbers()
@@ -478,7 +476,6 @@ function plane_figurate_numbers.pronic_numbers()
   end)
 end
 
--- alias
 plane_figurate_numbers.heteromecic_numbers = plane_figurate_numbers.pronic_numbers
 plane_figurate_numbers.oblong_numbers = plane_figurate_numbers.pronic_numbers
 
@@ -524,7 +521,6 @@ function plane_figurate_numbers.polygram_numbers(m)
   end)
 end
 
---alias
 plane_figurate_numbers.centered_star_polygonal_numbers = plane_figurate_numbers.polygram_numbers
 
 function plane_figurate_numbers.pentagram_numbers()
@@ -575,7 +571,6 @@ function plane_figurate_numbers.truncated_centered_pol_numbers(m)
   end)
 end
 
--- Crear un alias para truncated_centered_pol_numbers
 plane_figurate_numbers.truncated_centered_mgonal_numbers = plane_figurate_numbers.truncated_centered_pol_numbers
 
 

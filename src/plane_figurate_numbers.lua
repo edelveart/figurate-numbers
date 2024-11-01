@@ -543,4 +543,28 @@ function plane_figurate_numbers.gnomic_numbers()
   end)
 end
 
+function plane_figurate_numbers.truncated_triangular_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((3 * delta ^ 2) - (3 * delta) + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.truncated_square_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((7 * delta ^ 2) - (10 * delta) + 4)
+    end
+  end)
+end
+
+function plane_figurate_numbers.truncated_pronic_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((7 * delta ^ 2) - (7 * delta) + 2)
+    end
+  end)
+end
+
 return plane_figurate_numbers

@@ -461,5 +461,11 @@ function TestFigurateNumbers:test_generalized_pentagonal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_generalized_hexagonal_numbers()
+  local expected = { 210, 171, 136, 105, 78, 55, 36, 21, 10, 3, 0, 1, 6, 15, 28, 45, 66, 91, 120, 153 }
+  local result = take(plane_figurate_numbers.generalized_hexagonal_numbers(10), 20)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

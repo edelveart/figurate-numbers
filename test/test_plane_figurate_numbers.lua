@@ -377,5 +377,11 @@ function TestFigurateNumbers:test_cross_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_aztec_diamond_numbers()
+  local expected = { 4, 12, 24, 40, 60, 84, 112, 144, 180, 220 }
+  local result = take(plane_figurate_numbers.aztec_diamond_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

@@ -500,4 +500,12 @@ function plane_figurate_numbers.impolite_numbers()
   end)
 end
 
+function plane_figurate_numbers.cross_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(4 * delta - 3)
+    end
+  end)
+end
+
 return plane_figurate_numbers

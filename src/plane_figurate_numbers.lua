@@ -524,4 +524,23 @@ function plane_figurate_numbers.polygram_numbers(m)
   end)
 end
 
+--alias
+plane_figurate_numbers.centered_star_polygonal_numbers = plane_figurate_numbers.polygram_numbers
+
+function plane_figurate_numbers.pentagram_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(5 * delta ^ 2 - 5 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.gnomic_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(2 * delta - 1)
+    end
+  end)
+end
+
 return plane_figurate_numbers

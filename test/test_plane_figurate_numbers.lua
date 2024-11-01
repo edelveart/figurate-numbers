@@ -473,5 +473,11 @@ function TestFigurateNumbers:test_generalized_centered_pol_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_generalized_pronic_numbers()
+  local expected = { 462, 420, 380, 342, 306, 272, 240, 210, 182, 156, 132, 110, 90, 72, 56, 42, 30, 20, 12, 6, 2, 0, 0, 2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, 182, 210, 240, 272, 306, 342, 380, 420, 462, 506, 552 }
+  local result = take(plane_figurate_numbers.generalized_pronic_numbers(22), 46)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

@@ -467,5 +467,11 @@ function TestFigurateNumbers:test_generalized_hexagonal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_generalized_centered_pol_numbers()
+  local expected = { 1441, 1261, 1093, 937, 793, 661, 541, 433, 337, 253, 181, 121, 73, 37, 13, 1, 1, 13, 37, 73, 121, 181, 253, 337, 433, 541, 661, 793, 937, 1093, 1261, 1441, 1633, 1837, 2053, 2281, 2521, 2773, 3037, 3313, 3601, 3901 }
+  local result = take(plane_figurate_numbers.generalized_centered_pol_numbers(12, 15), 42)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

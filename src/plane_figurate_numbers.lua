@@ -232,4 +232,12 @@ function plane_figurate_numbers.triacontagonal_numbers()
   end)
 end
 
+function plane_figurate_numbers.centered_triangular_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((3 * delta ^ 2 - 3 * delta + 2) / 2)
+    end
+  end)
+end
+
 return plane_figurate_numbers

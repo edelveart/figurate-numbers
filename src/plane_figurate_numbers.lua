@@ -470,4 +470,12 @@ function plane_figurate_numbers.centered_mgonal_numbers(m)
   end)
 end
 
+function plane_figurate_numbers.pronic_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1))
+    end
+  end)
+end
+
 return plane_figurate_numbers

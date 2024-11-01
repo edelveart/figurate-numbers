@@ -251,4 +251,52 @@ end
 -- alias
 plane_figurate_numbers.diamond_numbers = plane_figurate_numbers.centered_square_numbers
 
+function plane_figurate_numbers.centered_pentagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((5 * delta ^ 2 - 5 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_hexagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(3 * delta ^ 2 - 3 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_heptagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((7 * delta ^ 2 - 7 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_octagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(4 * delta ^ 2 - 4 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_nonagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((9 * delta ^ 2 - 9 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_decagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(5 * delta ^ 2 - 5 * delta + 1)
+    end
+  end)
+end
+
 return plane_figurate_numbers

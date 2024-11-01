@@ -482,4 +482,14 @@ end
 plane_figurate_numbers.heteromecic_numbers = plane_figurate_numbers.pronic_numbers
 plane_figurate_numbers.oblong_numbers = plane_figurate_numbers.pronic_numbers
 
+local math = require("math")
+
+function plane_figurate_numbers.polite_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta + math.floor(math.log(delta + math.log(delta, 2), 2)))
+    end
+  end)
+end
+
 return plane_figurate_numbers

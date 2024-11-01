@@ -449,5 +449,11 @@ function TestFigurateNumbers:test_truncated_centered_hexagonal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_generalized_mgonal_numbers()
+  local expected = { 1030, 931, 837, 748, 664, 585, 511, 442, 378, 319, 265, 216, 172, 133, 99, 70, 46, 27, 13, 4, 0, 1, 7, 18, 34, 55, 81, 112, 148, 189, 235, 286, 342, 403, 469, 540, 616, 697, 783, 874, 970, 1071, 1177, 1288, 1404, 1525, 1651, 1782, 1918, 2059, 2205, 2356, 2512, 2673, 2839, 3010, 3186, 3367, 3553, 3744, 3940, 4141, 4347, 4558, 4774 }
+  local result = take(plane_figurate_numbers.generalized_mgonal_numbers(7, 20), 65)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

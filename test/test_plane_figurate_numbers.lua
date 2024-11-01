@@ -359,5 +359,11 @@ function TestFigurateNumbers:test_pronic_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_polite_numbers()
+  local expected = { 1, 3, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19 }
+  local result = take(plane_figurate_numbers.polite_numbers(), 15)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

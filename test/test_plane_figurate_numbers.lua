@@ -365,5 +365,11 @@ function TestFigurateNumbers:test_polite_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_impolite_numbers()
+  local expected = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384 }
+  local result = take(plane_figurate_numbers.impolite_numbers(), 15)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

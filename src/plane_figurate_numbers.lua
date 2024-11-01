@@ -248,4 +248,7 @@ function plane_figurate_numbers.centered_square_numbers()
   end)
 end
 
+-- alias
+plane_figurate_numbers.diamond_numbers = plane_figurate_numbers.centered_square_numbers
+
 return plane_figurate_numbers

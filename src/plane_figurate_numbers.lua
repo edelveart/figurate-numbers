@@ -567,4 +567,16 @@ function plane_figurate_numbers.truncated_pronic_numbers()
   end)
 end
 
+function plane_figurate_numbers.truncated_centered_pol_numbers(m)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(1 + (m * (7 * delta ^ 2 - 11 * delta + 4)) / 2)
+    end
+  end)
+end
+
+-- Crear un alias para truncated_centered_pol_numbers
+plane_figurate_numbers.truncated_centered_mgonal_numbers = plane_figurate_numbers.truncated_centered_pol_numbers
+
+
 return plane_figurate_numbers

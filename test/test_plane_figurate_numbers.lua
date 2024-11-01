@@ -383,5 +383,11 @@ function TestFigurateNumbers:test_aztec_diamond_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_polygram_numbers()
+  local expected = { 1, 7, 19, 37, 61, 91, 127, 169, 217, 271, 331, 397, 469, 547, 631, 721, 817, 919, 1027, 1141, 1261, 1387, 1519, 1657, 1801, 1951, 2107, 2269, 2437, 2611, 2791, 2977, 3169, 3367, 3571, 3781, 3997, 4219, 4447, 4681, 4921, 5167, 5419, 5677, 5941, 6211, 6487, 6769, 7057, 7351 }
+  local result = take(plane_figurate_numbers.polygram_numbers(3), 50)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

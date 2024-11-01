@@ -389,5 +389,11 @@ function TestFigurateNumbers:test_polygram_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_pentagram_numbers()
+  local expected = { 1, 11, 31, 61, 101, 151, 211, 281, 361, 451 }
+  local result = take(plane_figurate_numbers.pentagram_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

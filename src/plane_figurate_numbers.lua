@@ -318,5 +318,148 @@ end
 -- alias
 plane_figurate_numbers.star_numbers = plane_figurate_numbers.centered_dodecagonal_numbers
 
+function plane_figurate_numbers.centered_tridecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((13 * delta ^ 2 - 13 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_tetradecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(7 * delta ^ 2 - 7 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_pentadecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((15 * delta ^ 2 - 15 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_hexadecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(8 * delta ^ 2 - 8 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_heptadecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((17 * delta ^ 2 - 17 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_octadecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(9 * delta ^ 2 - 9 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_nonadecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((19 * delta ^ 2 - 19 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icosagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(10 * delta ^ 2 - 10 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icosihenagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((21 * delta ^ 2 - 21 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icosidigonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(11 * delta ^ 2 - 11 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icositrigonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((23 * delta ^ 2 - 23 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icositetragonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(12 * delta ^ 2 - 12 * delta + 1)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icosipentagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((25 * delta ^ 2 - 25 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icosihexagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((13 * delta ^ 2 - 13 * delta + 1))
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icosiheptagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((27 * delta ^ 2 - 27 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icosioctagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((14 * delta ^ 2 - 14 * delta + 1))
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_icosinonagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((29 * delta ^ 2 - 29 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_triacontagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((15 * delta ^ 2 - 15 * delta + 1))
+    end
+  end)
+end
 
 return plane_figurate_numbers

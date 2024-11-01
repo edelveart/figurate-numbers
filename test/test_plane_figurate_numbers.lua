@@ -401,5 +401,53 @@ function TestFigurateNumbers:test_gnomic_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_truncated_triangular_numbers()
+  local expected = { 1, 7, 19, 37, 61, 91, 127, 169, 217, 271 }
+  local result = take(plane_figurate_numbers.truncated_triangular_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_truncated_square_numbers()
+  local expected = { 1, 12, 37, 76, 129, 196, 277, 372, 481, 604, 741, 892, 1057, 1236, 1429, 1636, 1857, 2092, 2341, 2604, 2881, 3172, 3477, 3796, 4129, 4476, 4837, 5212, 5601, 6004, 6421, 6852, 7297, 7756, 8229, 8716, 9217, 9732, 10261, 10804, 11361, 11932, 12517, 13116, 13729 }
+  local result = take(plane_figurate_numbers.truncated_square_numbers(), 45)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_truncated_pronic_numbers()
+  local expected = { 2, 16, 44, 86, 142, 212, 296, 394, 506, 632 }
+  local result = take(plane_figurate_numbers.truncated_pronic_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_truncated_centered_pol_numbers()
+  local expected = { 1, 36, 120, 253, 435, 666, 946, 1275, 1653, 2080, 2556, 3081, 3655, 4278, 4950, 5671, 6441, 7260, 8128, 9045, 10011, 11026, 12090, 13203, 14365 }
+  local result = take(plane_figurate_numbers.truncated_centered_pol_numbers(7), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_truncated_centered_triangular_numbers()
+  local expected = { 1, 16, 52, 109, 187, 286, 406, 547, 709, 892, 1096, 1321, 1567, 1834, 2122, 2431, 2761, 3112, 3484, 3877 }
+  local result = take(plane_figurate_numbers.truncated_centered_triangular_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_truncated_centered_square_numbers()
+  local expected = { 1, 21, 69, 145, 249, 381, 541, 729, 945, 1189, 1461, 1761, 2089, 2445, 2829, 3241, 3681, 4149, 4645, 5169 }
+  local result = take(plane_figurate_numbers.truncated_centered_square_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_truncated_centered_pentagonal_numbers()
+  local expected = { 1, 26, 86, 181, 311, 476, 676, 911, 1181, 1486, 1826, 2201, 2611, 3056, 3536, 4051, 4601, 5186, 5806, 6461 }
+  local result = take(plane_figurate_numbers.truncated_centered_pentagonal_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_truncated_centered_hexagonal_numbers()
+  local expected = { 1, 31, 103, 217, 373, 571, 811, 1093, 1417, 1783, 2191, 2641, 3133, 3667, 4243, 4861, 5521, 6223, 6967, 7753 }
+  local result = take(plane_figurate_numbers.truncated_centered_hexagonal_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

@@ -492,4 +492,12 @@ function plane_figurate_numbers.polite_numbers()
   end)
 end
 
+function plane_figurate_numbers.impolite_numbers()
+  return coroutine.wrap(function()
+    for delta = 0, math.huge do
+      coroutine.yield(2 ^ delta)
+    end
+  end)
+end
+
 return plane_figurate_numbers

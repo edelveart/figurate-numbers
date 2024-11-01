@@ -508,4 +508,12 @@ function plane_figurate_numbers.cross_numbers()
   end)
 end
 
+function plane_figurate_numbers.aztec_diamond_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta) * (delta + 1))
+    end
+  end)
+end
+
 return plane_figurate_numbers

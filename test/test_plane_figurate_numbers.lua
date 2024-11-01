@@ -342,7 +342,7 @@ function TestFigurateNumbers:test_centered_icosinonagonal_numbers()
 end
 
 function TestFigurateNumbers:test_centered_triacontagonal_numbers()
-  local expected = { 1, 30, 88, 175, 291, 436, 610, 813, 1045, 1306, 1596, 1915, 2263, 2640, 3046, 3481, 3945, 4438, 4960, 5511 }
+  local expected = { 1, 31, 91, 181, 301, 451, 631, 841, 1081, 1351, 1651, 1981, 2341, 2731, 3151, 3601, 4081, 4591, 5131, 5701 }
   local result = take(plane_figurate_numbers.centered_triacontagonal_numbers(), 20)
   luaunit.assertEquals(result, expected)
 end

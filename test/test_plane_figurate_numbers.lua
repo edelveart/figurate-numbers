@@ -227,5 +227,65 @@ function TestFigurateNumbers:test_centered_decagonal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_centered_hendecagonal_numbers()
+  local expected = { 1, 12, 34, 67, 111, 166, 232, 309, 397, 496, 606, 727, 859, 1002, 1156, 1321, 1497, 1684, 1882, 2091 }
+  local result = take(plane_figurate_numbers.centered_hendecagonal_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_dodecagonal_numbers()
+  local expected = { 1, 13, 37, 73, 121, 181, 253, 337, 433, 541, 661, 793, 937, 1093, 1261, 1441, 1633, 1837, 2053, 2281, 2521, 2773, 3037, 3313, 3601, 3901, 4213, 4537, 4873, 5221 }
+  local result = take(plane_figurate_numbers.centered_dodecagonal_numbers(), 30)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_tridecagonal_numbers()
+  local expected = { 1, 14, 40, 79, 131, 196, 274, 365, 469, 586, 716, 859, 1015, 1184, 1366, 1561, 1769, 1990, 2224, 2471, 2731, 3004, 3290, 3589, 3901 }
+  local result = take(plane_figurate_numbers.centered_tridecagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_tetradecagonal_numbers()
+  local expected = { 1, 15, 43, 85, 141, 211, 295, 393, 505, 631, 771, 925, 1093, 1275, 1471, 1681, 1905, 2143, 2395, 2661, 2941, 3235, 3543, 3865, 4201 }
+  local result = take(plane_figurate_numbers.centered_tetradecagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_pentadecagonal_numbers()
+  local expected = { 1, 16, 46, 91, 151, 226, 316, 421, 541, 676, 826, 991, 1171, 1366, 1576, 1801, 2041, 2296, 2566, 2851, 3151, 3466, 3796, 4141, 4501 }
+  local result = take(plane_figurate_numbers.centered_pentadecagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_hexadecagonal_numbers()
+  local expected = { 1, 17, 49, 97, 161, 241, 337, 449, 577, 721, 881, 1057, 1249, 1457, 1681, 1921, 2177, 2449, 2737, 3041, 3361, 3697, 4049, 4417, 4801 }
+  local result = take(plane_figurate_numbers.centered_hexadecagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_heptadecagonal_numbers()
+  local expected = { 1, 18, 52, 103, 171, 256, 358, 477, 613, 766, 936, 1123, 1327, 1548, 1786, 2041, 2313, 2602, 2908, 3231, 3571, 3928, 4302, 4693, 5101 }
+  local result = take(plane_figurate_numbers.centered_heptadecagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_octadecagonal_numbers()
+  local expected = { 1, 19, 55, 109, 181, 271, 379, 505, 649, 811, 991, 1189, 1405, 1639, 1891, 2161, 2449, 2755, 3079, 3421, 3781, 4159, 4555, 4969, 5401 }
+  local result = take(plane_figurate_numbers.centered_octadecagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_nonadecagonal_numbers()
+  local expected = { 1, 20, 58, 115, 191, 286, 400, 533, 685, 856, 1046, 1255, 1483, 1730, 1996, 2281, 2585, 2908, 3250, 3611, 3991, 4390, 4808, 5245, 5701 }
+  local result = take(plane_figurate_numbers.centered_nonadecagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icosagonal_numbers()
+  local expected = { 1, 21, 61, 121, 201, 301, 421, 561, 721, 901, 1101, 1321, 1561, 1821, 2101, 2401, 2721, 3061, 3421, 3801, 4201, 4621, 5061, 5521, 6001 }
+  local result = take(plane_figurate_numbers.centered_icosagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

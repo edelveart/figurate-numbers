@@ -347,5 +347,11 @@ function TestFigurateNumbers:test_centered_triacontagonal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_centered_mgonal_numbers()
+  local expected = { 1, 4, 10, 19, 31, 46, 64, 85, 109, 136, 166, 199, 235, 274, 316, 361, 409, 460, 514, 571, 631, 694, 760, 829, 901, 976, 1054, 1135, 1219, 1306, 1396, 1489, 1585, 1684, 1786, 1891, 1999, 2110, 2224, 2341, 2461, 2584, 2710, 2839, 2971, 3106, 3244, 3385, 3529, 3676, 3826, 3979, 4135, 4294, 4456, 4621, 4789, 4960, 5134, 5311 }
+  local result = take(plane_figurate_numbers.centered_mgonal_numbers(3), 60)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

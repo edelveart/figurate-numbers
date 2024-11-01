@@ -287,5 +287,65 @@ function TestFigurateNumbers:test_centered_icosagonal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_centered_icosihenagonal_numbers()
+  local expected = { 1, 22, 64, 127, 211, 316, 442, 589, 757, 946, 1156, 1387, 1639, 1912, 2206, 2521, 2857, 3214, 3592, 3991, 4411, 4852, 5314, 5797, 6301 }
+  local result = take(plane_figurate_numbers.centered_icosihenagonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icosidigonal_numbers()
+  local expected = { 1, 23, 67, 133, 221, 331, 463, 617, 793, 991, 1211, 1453, 1717, 2003, 2311, 2641, 2993, 3367, 3763, 4181, 4621, 5083, 5567, 6073, 6601 }
+  local result = take(plane_figurate_numbers.centered_icosidigonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icositrigonal_numbers()
+  local expected = { 1, 24, 70, 139, 231, 346, 484, 645, 829, 1036, 1266, 1519, 1795, 2094, 2416, 2761, 3129, 3520, 3934, 4371, 4831, 5314, 5820, 6349, 6901 }
+  local result = take(plane_figurate_numbers.centered_icositrigonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icositetragonal_numbers()
+  local expected = { 1, 25, 73, 145, 241, 361, 505, 673, 865, 1081, 1321, 1585, 1873, 2185, 2521, 2881, 3265, 3673, 4105, 4561, 5041, 5545, 6073, 6625, 7201 }
+  local result = take(plane_figurate_numbers.centered_icositetragonal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icosipentagonal_numbers()
+  local expected = { 1, 26, 76, 151, 251, 376, 526, 701, 901, 1126, 1376, 1651, 1951, 2276, 2626, 3001, 3401, 3826, 4276, 4751, 5251, 5776, 6326, 6901, 7501, 8126, 8776, 9451, 10151, 10876 }
+  local result = take(plane_figurate_numbers.centered_icosipentagonal_numbers(), 30)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icosihexagonal_numbers()
+  local expected = { 1, 27, 79, 157, 261, 391, 547, 729, 937, 1171, 1431, 1717, 2029, 2367, 2731, 3121, 3537, 3979, 4447, 4941 }
+  local result = take(plane_figurate_numbers.centered_icosihexagonal_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icosiheptagonal_numbers()
+  local expected = { 1, 28, 82, 163, 271, 406, 568, 757, 973, 1216, 1486, 1783, 2107, 2458, 2836, 3241, 3673, 4132, 4618, 5131 }
+  local result = take(plane_figurate_numbers.centered_icosiheptagonal_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icosioctagonal_numbers()
+  local expected = { 1, 29, 85, 169, 281, 421, 589, 785, 1009, 1261, 1541, 1849, 2185, 2549, 2941, 3361, 3809, 4285, 4789, 5321 }
+  local result = take(plane_figurate_numbers.centered_icosioctagonal_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icosinonagonal_numbers()
+  local expected = { 1, 30, 88, 175, 291, 436, 610, 813, 1045, 1306, 1596, 1915, 2263, 2640, 3046, 3481, 3945, 4438, 4960, 5511 }
+  local result = take(plane_figurate_numbers.centered_icosinonagonal_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_triacontagonal_numbers()
+  local expected = { 1, 30, 88, 175, 291, 436, 610, 813, 1045, 1306, 1596, 1915, 2263, 2640, 3046, 3481, 3945, 4438, 4960, 5511 }
+  local result = take(plane_figurate_numbers.centered_triacontagonal_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

@@ -299,4 +299,24 @@ function plane_figurate_numbers.centered_decagonal_numbers()
   end)
 end
 
+function plane_figurate_numbers.centered_hendecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((11 * delta ^ 2 - 11 * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.centered_dodecagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(6 * delta ^ 2 - 6 * delta + 1)
+    end
+  end)
+end
+
+-- alias
+plane_figurate_numbers.star_numbers = plane_figurate_numbers.centered_dodecagonal_numbers
+
+
 return plane_figurate_numbers

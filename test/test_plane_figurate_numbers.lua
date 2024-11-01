@@ -455,5 +455,11 @@ function TestFigurateNumbers:test_generalized_mgonal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_generalized_pentagonal_numbers()
+  local expected = { 155, 126, 100, 77, 57, 40, 26, 15, 7, 2, 0, 1, 5, 12, 22, 35, 51, 70, 92, 117 }
+  local result = take(plane_figurate_numbers.generalized_pentagonal_numbers(10), 20)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

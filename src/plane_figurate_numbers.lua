@@ -573,5 +573,67 @@ end
 
 plane_figurate_numbers.truncated_centered_mgonal_numbers = plane_figurate_numbers.truncated_centered_pol_numbers
 
+function plane_figurate_numbers.truncated_centered_triangular_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((21 * delta ^ 2 - 33 * delta) / 2 + 7)
+    end
+  end)
+end
+
+function plane_figurate_numbers.truncated_centered_square_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(14 * delta ^ 2 - 22 * delta + 9)
+    end
+  end)
+end
+
+function plane_figurate_numbers.truncated_centered_pentagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((35 * delta ^ 2 - 55 * delta) / 2 + 11)
+    end
+  end)
+end
+
+function plane_figurate_numbers.truncated_centered_hexagonal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(21 * delta ^ 2 - 33 * delta + 13)
+    end
+  end)
+end
+
+plane_figurate_numbers.truncated_hex_numbers = plane_figurate_numbers.truncated_centered_hexagonal_numbers
+
+function plane_figurate_numbers.generalized_mgonal_numbers(m, left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = -math.abs(left_index), math.huge do
+      coroutine.yield((delta * ((m - 2) * delta - m + 4)) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.generalized_pentagonal_numbers(left_index)
+  local m = 5
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = -math.abs(left_index), math.huge do
+      coroutine.yield((delta * ((m - 2) * delta - m + 4)) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.generalized_hexagonal_numbers(left_index)
+  local m = 6
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = -math.abs(left_index), math.huge do
+      coroutine.yield((delta * ((m - 2) * delta - m + 4)) / 2)
+    end
+  end)
+end
 
 return plane_figurate_numbers

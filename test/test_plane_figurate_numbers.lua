@@ -395,5 +395,11 @@ function TestFigurateNumbers:test_pentagram_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_gnomic_numbers()
+  local expected = { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 }
+  local result = take(plane_figurate_numbers.gnomic_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

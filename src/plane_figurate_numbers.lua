@@ -636,4 +636,22 @@ function plane_figurate_numbers.generalized_hexagonal_numbers(left_index)
   end)
 end
 
+function plane_figurate_numbers.generalized_centered_pol_numbers(m, left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = -1 * math.abs(left_index), math.huge do
+      coroutine.yield((m * delta ^ 2 - m * delta + 2) / 2)
+    end
+  end)
+end
+
+function plane_figurate_numbers.generalized_pronic_numbers(left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = -1 * math.abs(left_index), math.huge do
+      coroutine.yield(delta * (delta + 1))
+    end
+  end)
+end
+
 return plane_figurate_numbers

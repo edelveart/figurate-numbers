@@ -189,3 +189,75 @@ Following the order of the book, the methods are divided into 3 types according 
 84. `generalized_centered_mgonal_pyramidal_numbers(m, left_index = 0)`
 85. `generalized_mgonal_prism_numbers(m, left_index = 0)`
 86. `generalized_hexagonal_prism_numbers(left_index = 0)`
+
+### 3. Multidimensional figurate numbers
+1.  `pentatope_numbers = hypertetrahedral_numbers = triangulotriangular_numbers`
+2.  `k_dimensional_hypertetrahedron_numbers(k) = k_hypertetrahedron_numbers(k) = regular_k_polytopic_numbers(k) = figurate_numbers_of_order_k(k)`
+3.  `five_dimensional_hypertetrahedron_numbers`
+4.  `six_dimensional_hypertetrahedron_numbers`
+5.  `biquadratic_numbers`
+6.  `k_dimensional_hypercube_numbers(k) = k_hypercube_numbers(k)`
+7.  `five_dimensional_hypercube_numbers`
+8.  `six_dimensional_hypercube_numbers`
+9.  `hyperoctahedral_numbers = hexadecachoron_numbers = four_cross_polytope_numbers = four_orthoplex_numbers`
+10.  `hypericosahedral_numbers = tetraplex_numbers = polytetrahedron_numbers = hexacosichoron_numbers`
+11.  `hyperdodecahedral_numbers = hecatonicosachoron_numbers = dodecaplex_numbers = polydodecahedron_numbers`
+12.  `polyoctahedral_numbers = icositetrachoron_numbers = octaplex_numbers = hyperdiamond_numbers`
+13.  `four_dimensional_hyperoctahedron_numbers`
+14.  `five_dimensional_hyperoctahedron_numbers`
+15.  `six_dimensional_hyperoctahedron_numbers`
+16.  `seven_dimensional_hyperoctahedron_numbers`
+17.  `eight_dimensional_hyperoctahedron_numbers`
+18.  `nine_dimensional_hyperoctahedron_numbers`
+19.  `ten_dimensional_hyperoctahedron_numbers`
+20.  `k_dimensional_hyperoctahedron_numbers(k) = k_cross_polytope_numbers(k)`
+21.  `four_dimensional_mgonal_pyramidal_numbers(m) = mgonal_pyramidal_numbers_of_the_second_order(m)`
+22.  `four_dimensional_square_pyramidal_numbers`
+23.  `four_dimensional_pentagonal_pyramidal_numbers`
+24.  `four_dimensional_hexagonal_pyramidal_numbers`
+25.  `four_dimensional_heptagonal_pyramidal_numbers`
+26.  `four_dimensional_octagonal_pyramidal_numbers`
+27.  `four_dimensional_nonagonal_pyramidal_numbers`
+28.  `four_dimensional_decagonal_pyramidal_numbers`
+29.  `four_dimensional_hendecagonal_pyramidal_numbers`
+30.  `four_dimensional_dodecagonal_pyramidal_numbers`
+31.  `k_dimensional_mgonal_pyramidal_numbers(k, m) = mgonal_pyramidal_numbers_of_the_k_2_th_order(k, m)`
+32.  `five_dimensional_mgonal_pyramidal_numbers(m)`
+33.  `five_dimensional_square_pyramidal_numbers`
+34.  `five_dimensional_pentagonal_pyramidal_numbers`
+35.  `five_dimensional_hexagonal_pyramidal_numbers`
+36.  `five_dimensional_heptagonal_pyramidal_numbers`
+37.  `five_dimensional_octagonal_pyramidal_numbers`
+38.  `six_dimensional_mgonal_pyramidal_numbers(m)`
+39.  `six_dimensional_square_pyramidal_numbers`
+40.  `six_dimensional_pentagonal_pyramidal_numbers`
+41.  `six_dimensional_hexagonal_pyramidal_numbers`
+42.  `six_dimensional_heptagonal_pyramidal_numbers`
+43.  `six_dimensional_octagonal_pyramidal_numbers`
+44.  `centered_biquadratic_numbers`
+45.  `k_dimensional_centered_hypercube_numbers(k)`
+46.  `five_dimensional_centered_hypercube_numbers`
+47.  `six_dimensional_centered_hypercube_numbers`
+48.  `centered_polytope_numbers`
+49.  `k_dimensional_centered_hypertetrahedron_numbers(k)`
+50.  `five_dimensional_centered_hypertetrahedron_numbers(k)`
+51.  `six_dimensional_centered_hypertetrahedron_numbers(k)`
+52.  `centered_hyperoctahedral_numbers = orthoplex_numbers`
+53.  `nexus_numbers(k)`
+54.  `k_dimensional_centered_hyperoctahedron_numbers(k)`
+55.  `five_dimensional_centered_hyperoctahedron_numbers`
+56.  `six_dimensional_centered_hyperoctahedron_numbers`
+57.  `generalized_pentatope_numbers(left_index = 0)`
+58.  `generalized_k_dimensional_hypertetrahedron_numbers(k = 5, left_index = 0)`
+59.  `generalized_biquadratic_numbers(left_index = 0)`
+60.  `generalized_k_dimensional_hypercube_numbers(k = 5, left_index = 0)`
+61.  `generalized_hyperoctahedral_numbers(left_index = 0)`
+62.  `generalized_k_dimensional_hyperoctahedron_numbers(k = 5, left_index = 0) [even or odd dimension only changes sign]`
+63.  `generalized_hyperdodecahedral_numbers(left_index = 0)`
+64.  `generalized_hypericosahedral_numbers(left_index = 0)`
+65.  `generalized_polyoctahedral_numbers(left_index = 0)`
+66.  `generalized_k_dimensional_mgonal_pyramidal_numbers(k, m, left_index = 0)`
+67.  `generalized_k_dimensional_centered_hypercube_numbers(k, left_index = 0)`
+68.  `generalized_k_dimensional_centered_hypertetrahedron_numbers(k, left_index = 0)[provisional symmetry]`
+69.  `generalized_k_dimensional_centered_hyperoctahedron_numbers(k, left_index = 0)[provisional symmetry]`
+70.  `generalized_nexus_numbers(k, left_index = 0) [even or odd dimension only changes sign]`

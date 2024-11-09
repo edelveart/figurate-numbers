@@ -182,5 +182,35 @@ function TestFigurateNumbers:test_triacontagonal_pyramidal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_triangular_tetrahedral_numbers()
+  local expected = { 1, 10, 120, 1540, 7140, 1, 10, 120, 1540, 7140 }
+  local result = take(space_figurate_numbers.triangular_tetrahedral_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_triangular_square_pyramidal_numbers()
+  local expected = { 1, 55, 91, 208335, 1, 55, 91, 208335, 1, 55 }
+  local result = take(space_figurate_numbers.triangular_square_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_square_tetrahedral_numbers()
+  local expected = { 1, 4, 19600, 1, 4, 19600, 1, 4, 19600, 1 }
+  local result = take(space_figurate_numbers.square_tetrahedral_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_square_square_pyramidal_numbers()
+  local expected = { 1, 4900, 1, 4900, 1, 4900, 1, 4900, 1, 4900 }
+  local result = take(space_figurate_numbers.square_square_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_tetrahedral_square_pyramidal_number()
+  local expected = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
+  local result = take(space_figurate_numbers.tetrahedral_square_pyramidal_number(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

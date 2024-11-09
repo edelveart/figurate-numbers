@@ -398,5 +398,70 @@ end
 
 space_figurate_numbers.centered_pyramid_numbers = space_figurate_numbers.centered_square_pyramid_numbers
 
+function space_figurate_numbers.centered_mgonal_pyramid_numbers(m)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((m - 1) * ((delta - 1) * delta * (2 * delta - 1)) / 6 + (2 * delta - 1))
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_pentagonal_pyramid_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (2 * delta ^ 2 - 2 * delta + 3) / 3)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_hexagonal_pyramid_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (5 * delta ^ 2 - 5 * delta + 6) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_heptagonal_pyramid_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (delta ^ 2 - delta + 1))
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_octagonal_pyramid_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (7 * delta ^ 2 - 7 * delta + 6) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_octahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (2 * delta ^ 2 - 2 * delta + 3) / 3)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_icosahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (5 * delta ^ 2 - 5 * delta + 3) / 3)
+    end
+  end)
+end
+
+space_figurate_numbers.centered_cuboctahedron_numbers = space_figurate_numbers.centered_icosahedron_numbers
+
+function space_figurate_numbers.centered_dodecahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (3 * delta ^ 2 - 3 * delta + 1))
+    end
+  end)
+end
 
 return space_figurate_numbers

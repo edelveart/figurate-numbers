@@ -498,4 +498,31 @@ function multidimensional_figurate_numbers.centered_polytope_numbers()
   end)
 end
 
+function multidimensional_figurate_numbers.helper_centered_hypertetrahedron(k, n)
+  if n == 1 then return 1 end
+  local t = binomial_coefficient(k + 1, k)
+  if n == 2 then return t end
+  local tau = 0
+  for i = 0, k - 1 do
+    tau = tau + binomial_coefficient(k + 1, k - i) * binomial_coefficient(n - 2, i)
+  end
+  return tau
+end
+
+function multidimensional_figurate_numbers.acc_helper_centered_hypertetrahedron(k, n)
+  local a = 0
+  for j = 1, n do
+    a = a + multidimensional_figurate_numbers.helper_centered_hypertetrahedron(k, j)
+  end
+  return a
+end
+
+function multidimensional_figurate_numbers.k_dimensional_centered_hypertetrahedron_numbers(k)
+  return coroutine.wrap(function()
+    for n = 1, math.huge do
+      coroutine.yield(multidimensional_figurate_numbers.acc_helper_centered_hypertetrahedron(k, n))
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

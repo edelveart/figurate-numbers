@@ -292,5 +292,35 @@ function TestFigurateNumbers:test_centered_polytope_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_k_dimensional_centered_hypertetrahedron_numbers()
+  local expected = { 1, 13 }
+  local result = take(multidimensional_figurate_numbers.k_dimensional_centered_hypertetrahedron_numbers(11), 2)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_centered_hypertetrahedron_numbers()
+  local expected = { 1, 7 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_centered_hypertetrahedron_numbers(), 2)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_centered_hypertetrahedron_numbers()
+  local expected = { 1, 8 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_centered_hypertetrahedron_numbers(), 2)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_hyperoctahedral_numbers()
+  local expected = { 1, 9, 41, 129, 321, 681, 1289, 2241, 3649, 5641, 8361, 11969, 16641, 22569, 29961, 39041, 50049, 63241, 78889, 97281, 118721, 143529, 172041, 204609, 241601, 283401, 330409, 383041, 441729, 506921, 579081, 658689, 746241, 842249, 947241, 1061761, 1186369, 1321641, 1468169, 1626561 }
+  local result = take(multidimensional_figurate_numbers.centered_hyperoctahedral_numbers(), 40)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_nexus_numbers()
+  local expected = { 1, 33554431, 847255055011, 1125052618233181, 296897323970110501, 28132264806052748251, 1312638331634035199431, 36437863243293196808761, 680119055828895427060681 }
+  local result = take(multidimensional_figurate_numbers.nexus_numbers(24), 9)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

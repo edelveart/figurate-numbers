@@ -136,5 +136,131 @@ function TestFigurateNumbers:test_four_dimensional_square_pyramidal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_four_dimensional_pentagonal_pyramidal_numbers()
+  local expected = { 1, 7, 25, 65, 140, 266, 462, 750, 1155, 1705 }
+  local result = take(multidimensional_figurate_numbers.four_dimensional_pentagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_four_dimensional_hexagonal_pyramidal_numbers()
+  local expected = { 1, 8, 30, 80, 175, 336, 588, 960, 1485, 2200 }
+  local result = take(multidimensional_figurate_numbers.four_dimensional_hexagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_four_dimensional_heptagonal_pyramidal_numbers()
+  local expected = { 1, 9, 35, 95, 210, 406, 714, 1170, 1815, 2695 }
+  local result = take(multidimensional_figurate_numbers.four_dimensional_heptagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_four_dimensional_octagonal_pyramidal_numbers()
+  local expected = { 1, 10, 40, 110, 245, 476, 840, 1380, 2145, 3190 }
+  local result = take(multidimensional_figurate_numbers.four_dimensional_octagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_four_dimensional_nonagonal_pyramidal_numbers()
+  local expected = { 1, 11, 45, 125, 280, 546, 966, 1590, 2475, 3685 }
+  local result = take(multidimensional_figurate_numbers.four_dimensional_nonagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_four_dimensional_decagonal_pyramidal_numbers()
+  local expected = { 1, 12, 50, 140, 315, 616, 1092, 1800, 2805, 4180 }
+  local result = take(multidimensional_figurate_numbers.four_dimensional_decagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_four_dimensional_hendecagonal_pyramidal_numbers()
+  local expected = { 1, 13, 55, 155, 350, 686, 1218, 2010, 3135, 4675 }
+  local result = take(multidimensional_figurate_numbers.four_dimensional_hendecagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_four_dimensional_dodecagonal_pyramidal_numbers()
+  local expected = { 1, 14, 60, 170, 385, 756, 1344, 2220, 3465, 5170 }
+  local result = take(multidimensional_figurate_numbers.four_dimensional_dodecagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_k_dimensional_mgonal_pyramidal_numbers()
+  local expected = { 1, 15, 117, 637, 2730, 9828, 30940, 87516, 226746, 545870 }
+  local result = take(multidimensional_figurate_numbers.k_dimensional_mgonal_pyramidal_numbers(12, 5), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_mgonal_pyramidal_numbers()
+  local expected = { 1, 12, 57, 182, 462, 1008, 1974, 3564, 6039, 9724, 15015, 22386, 32396, 45696, 63036, 85272, 113373, 148428, 191653, 244398, 308154, 384560, 475410, 582660, 708435, 855036, 1024947, 1220842, 1445592, 1702272, 1994168, 2324784, 2697849, 3117324, 3587409 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_mgonal_pyramidal_numbers(9), 35)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_square_pyramidal_numbers()
+  local expected = { 1, 7, 27, 77, 182, 378, 714, 1254, 2079, 3289 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_square_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_pentagonal_pyramidal_numbers()
+  local expected = { 1, 8, 33, 98, 238, 504, 966, 1716, 2871, 4576 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_pentagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_hexagonal_pyramidal_numbers()
+  local expected = { 1, 9, 39, 119, 294, 630, 1218, 2178, 3663, 5863 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_hexagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_heptagonal_pyramidal_numbers()
+  local expected = { 1, 10, 45, 140, 350, 756, 1470, 2640, 4455, 7150 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_heptagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_octagonal_pyramidal_numbers()
+  local expected = { 1, 11, 51, 161, 406, 882, 1722, 3102, 5247, 8437 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_octagonal_pyramidal_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_mgonal_pyramidal_numbers()
+  local expected = { 1, 20, 119, 448, 1302, 3192, 6930, 13728, 25311, 44044, 73073, 116480, 179452, 268464, 391476, 558144, 780045, 1070916, 1446907, 1926848, 2532530, 3289000, 4224870, 5372640, 6769035, 8455356, 10477845, 12888064, 15743288, 19106912, 23048872, 27646080, 32982873, 39151476, 46252479, 54395328, 63698830, 74291672, 86312954, 99912736, 115252599, 132506220, 151859961, 173513472, 197680308 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_mgonal_pyramidal_numbers(16), 45)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_square_pyramidal_numbers()
+  local expected = { 1, 8, 35, 112, 294, 672, 1386, 2640, 4719, 8008, 13013, 20384, 30940, 45696, 65892 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_square_pyramidal_numbers(), 15)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_pentagonal_pyramidal_numbers()
+  local expected = { 1, 9, 42, 140, 378, 882, 1848, 3564, 6435, 11011, 18018, 28392, 43316, 64260, 93024 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_pentagonal_pyramidal_numbers(), 15)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_hexagonal_pyramidal_numbers()
+  local expected = { 1, 10, 49, 168, 462, 1092, 2310, 4488, 8151, 14014, 23023, 36400, 55692, 82824, 120156 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_hexagonal_pyramidal_numbers(), 15)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_heptagonal_pyramidal_numbers()
+  local expected = { 1, 11, 56, 196, 546, 1302, 2772, 5412, 9867, 17017, 28028, 44408, 68068, 101388, 147288 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_heptagonal_pyramidal_numbers(), 15)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_octagonal_pyramidal_numbers()
+  local expected = { 1, 12, 63, 224, 630, 1512, 3234, 6336, 11583, 20020, 33033, 52416, 80444, 119952, 174420 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_octagonal_pyramidal_numbers(), 15)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

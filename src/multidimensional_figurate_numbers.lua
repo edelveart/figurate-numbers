@@ -227,7 +227,89 @@ function multidimensional_figurate_numbers.k_dimensional_hyperoctahedron_numbers
 end
 
 multidimensional_figurate_numbers.k_cross_polytope_numbers = multidimensional_figurate_numbers
-.k_dimensional_hyperoctahedron_numbers
+    .k_dimensional_hyperoctahedron_numbers
 
+function multidimensional_figurate_numbers.four_dimensional_mgonal_pyramidal_numbers(m)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((m - 2) * delta - m + 6)) / 24)
+    end
+  end)
+end
+
+multidimensional_figurate_numbers.mgonal_pyramidal_numbers_of_the_second_order = multidimensional_figurate_numbers
+    .four_dimensional_mgonal_pyramidal_numbers
+
+function multidimensional_figurate_numbers.four_dimensional_square_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((4 - 2) * delta - 4 + 6)) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.four_dimensional_pentagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((5 - 2) * delta - 5 + 6)) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.four_dimensional_hexagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((6 - 2) * delta - 6 + 6)) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.four_dimensional_heptagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((7 - 2) * delta - 7 + 6)) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.four_dimensional_octagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((8 - 2) * delta - 8 + 6)) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.four_dimensional_nonagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((9 - 2) * delta - 9 + 6)) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.four_dimensional_decagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((10 - 2) * delta - 10 + 6)) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.four_dimensional_hendecagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((11 - 2) * delta - 11 + 6)) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.four_dimensional_dodecagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * ((12 - 2) * delta - 12 + 6)) / 24)
+    end
+  end)
+end
 
 return multidimensional_figurate_numbers

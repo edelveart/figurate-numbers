@@ -388,5 +388,15 @@ end
 
 space_figurate_numbers.centered_tetrahedral_numbers = space_figurate_numbers.centered_tetrahedron_numbers
 
+function space_figurate_numbers.centered_square_pyramid_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * ((delta ^ 2 - delta + 2)) / 2)
+    end
+  end)
+end
+
+space_figurate_numbers.centered_pyramid_numbers = space_figurate_numbers.centered_square_pyramid_numbers
+
 
 return space_figurate_numbers

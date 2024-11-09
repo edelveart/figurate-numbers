@@ -312,4 +312,33 @@ function multidimensional_figurate_numbers.four_dimensional_dodecagonal_pyramida
   end)
 end
 
+local function pseudo_rising_factorial(n, k)
+  local t = 1
+  for i = n, n + k - 2 do
+    t = t * i
+  end
+  return t
+end
+
+local function pseudo_pochhammer_function(n, k)
+  local result = 1
+  for i = n, n + k - 2 do
+    result = result * i
+  end
+  return result
+end
+
+function multidimensional_figurate_numbers.k_dimensional_mgonal_pyramidal_numbers(k, m)
+  return coroutine.wrap(function()
+    for n = 1, math.huge do
+      local result = (pseudo_pochhammer_function(n, k) * ((m - 2) * n - m + k + 2)) / factorial_iter(k)
+      coroutine.yield(result)
+    end
+  end)
+end
+
+multidimensional_figurate_numbers.mgonal_pyramidal_numbers_of_the_k_2_th_order = multidimensional_figurate_numbers
+.k_dimensional_mgonal_pyramidal_numbers
+
+
 return multidimensional_figurate_numbers

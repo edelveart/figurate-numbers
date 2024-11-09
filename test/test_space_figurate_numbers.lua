@@ -328,5 +328,113 @@ function TestFigurateNumbers:test_centered_mgonal_pyramid_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_centered_pentagonal_pyramid_numbers()
+  local expected = { 1, 7, 25, 63, 129, 231, 377, 575, 833, 1159 }
+  local result = take(space_figurate_numbers.centered_pentagonal_pyramid_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_hexagonal_pyramid_numbers()
+  local expected = { 1, 8, 30, 77, 159, 286, 468, 715, 1037, 1444, 1946, 2553, 3275, 4122, 5104, 6231, 7513, 8960, 10582, 12389, 14391, 16598, 19020, 21667, 24549, 27676, 31058, 34705, 38627, 42834, 47336, 52143, 57265, 62712, 68494, 74621, 81103, 87950, 95172, 102779, 110781, 119188, 128010, 137257, 146939, 157066, 167648, 178695, 190217, 202224, 214726, 227733, 241255, 255302, 269884, 285011, 300693, 316940, 333762, 351169, 369171, 387778, 407000, 426847, 447329, 468456, 490238, 512685, 535807, 559614, 584116, 609323, 635245, 661892, 689274 }
+  local result = take(space_figurate_numbers.centered_hexagonal_pyramid_numbers(), 75)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_heptagonal_pyramid_numbers()
+  local expected = { 1, 9, 35, 91, 189, 341, 559, 855, 1241, 1729 }
+  local result = take(space_figurate_numbers.centered_heptagonal_pyramid_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_octagonal_pyramid_numbers()
+  local expected = { 1, 10, 40, 105, 219, 396, 650, 995, 1445, 2014 }
+  local result = take(space_figurate_numbers.centered_octagonal_pyramid_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_octahedron_numbers()
+  local expected = { 1, 7, 25, 63, 129, 231, 377, 575, 833, 1159, 1561, 2047, 2625, 3303, 4089, 4991, 6017, 7175, 8473, 9919 }
+  local result = take(space_figurate_numbers.centered_octahedron_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_icosahedron_numbers()
+  local expected = { 1, 13, 55, 147, 309, 561, 923, 1415, 2057, 2869 }
+  local result = take(space_figurate_numbers.centered_icosahedron_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_dodecahedron_numbers()
+  local expected = { 1, 21, 95, 259, 549, 1001, 1651, 2535, 3689, 5149 }
+  local result = take(space_figurate_numbers.centered_dodecahedron_numbers(), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_truncated_tetrahedron_numbers()
+  local expected = { 1, 17, 75, 203, 429, 781, 1287, 1975, 2873, 4009, 5411, 7107, 9125, 11493, 14239, 17391, 20977, 25025, 29563, 34619 }
+  local result = take(space_figurate_numbers.centered_truncated_tetrahedron_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_truncated_cube_numbers()
+  local expected = { 1, 49, 235, 651, 1389, 2541, 4199, 6455, 9401, 13129, 17731, 23299, 29925, 37701, 46719, 57071, 68849, 82145, 97051, 113659 }
+  local result = take(space_figurate_numbers.centered_truncated_cube_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_truncated_octahedron_numbers()
+  local expected = { 1, 33, 155, 427, 909, 1661, 2743, 4215, 6137, 8569, 11571, 15203, 19525, 24597, 30479, 37231, 44913, 53585, 63307, 74139 }
+  local result = take(space_figurate_numbers.centered_truncated_octahedron_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_mgonal_pyramidal_numbers()
+  local expected = { 1, 13, 47, 114, 225, 391, 623, 932, 1329, 1825, 2431, 3158, 4017, 5019, 6175, 7496, 8993, 10677, 12559, 14650, 16961, 19503, 22287, 25324, 28625, 32201, 36063, 40222, 44689, 49475, 54591, 60048, 65857, 72029, 78575, 85506, 92833, 100567, 108719, 117300, 126321, 135793, 145727, 156134, 167025, 178411, 190303, 202712, 215649, 229125, 243151, 257738, 272897, 288639, 304975, 321916, 339473, 357657, 376479, 395950 }
+  local result = take(space_figurate_numbers.centered_mgonal_pyramidal_numbers(11), 60)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_triangular_pyramidal_numbers()
+  local expected = { 1, 5, 15, 34, 65, 111, 175, 260, 369, 505, 671, 870, 1105, 1379, 1695, 2056, 2465, 2925, 3439, 4010, 4641, 5335, 6095, 6924, 7825 }
+  local result = take(space_figurate_numbers.centered_triangular_pyramidal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_square_pyramidal_numbers()
+  local expected = { 1, 6, 19, 44, 85, 146, 231, 344, 489, 670, 891, 1156, 1469, 1834, 2255, 2736, 3281, 3894, 4579, 5340, 6181, 7106, 8119, 9224, 10425 }
+  local result = take(space_figurate_numbers.centered_square_pyramidal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_pentagonal_pyramidal_numbers()
+  local expected = { 1, 7, 23, 54, 105, 181, 287, 428, 609, 835, 1111, 1442, 1833, 2289, 2815, 3416, 4097, 4863, 5719, 6670, 7721, 8877, 10143, 11524, 13025 }
+  local result = take(space_figurate_numbers.centered_pentagonal_pyramidal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_hexagonal_pyramidal_numbers()
+  local expected = { 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197, 2744, 3375, 4096, 4913, 5832, 6859, 8000, 9261, 10648, 12167, 13824, 15625 }
+  local result = take(space_figurate_numbers.centered_hexagonal_pyramidal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_heptagonal_pyramidal_numbers()
+  local expected = { 1, 9, 31, 74, 145, 251, 399, 596, 849, 1165, 1551, 2014, 2561, 3199, 3935, 4776, 5729, 6801, 7999, 9330, 10801, 12419, 14191, 16124, 18225 }
+  local result = take(space_figurate_numbers.centered_heptagonal_pyramidal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_octagonal_pyramidal_numbers()
+  local expected = { 1, 10, 35, 84, 165, 286, 455, 680, 969, 1330, 1771, 2300, 2925, 3654, 4495, 5456, 6545, 7770, 9139, 10660, 12341, 14190, 16215, 18424, 20825 }
+  local result = take(space_figurate_numbers.centered_octagonal_pyramidal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_nonagonal_pyramidal_numbers()
+  local expected = { 1, 11, 39, 94, 185, 321, 511, 764, 1089, 1495, 1991, 2586, 3289, 4109, 5055, 6136, 7361, 8739, 10279, 11990, 13881, 15961, 18239, 20724, 23425 }
+  local result = take(space_figurate_numbers.centered_nonagonal_pyramidal_numbers(), 25)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

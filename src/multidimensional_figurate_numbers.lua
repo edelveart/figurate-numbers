@@ -166,4 +166,52 @@ function multidimensional_figurate_numbers.four_dimensional_hyperoctahedron_numb
   end)
 end
 
+function multidimensional_figurate_numbers.five_dimensional_hyperoctahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (2 * delta ^ 4 + 10 * delta ^ 2 + 3) / 15)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_hyperoctahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta ^ 2 * (2 * delta ^ 4 + 20 * delta ^ 2 + 23) / 45)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.seven_dimensional_hyperoctahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((4 * delta ^ 6 + 70 * delta ^ 4 + 196 * delta ^ 2 + 45) * delta / 315)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.eight_dimensional_hyperoctahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta ^ 6 + 28 * delta ^ 4 + 154 * delta ^ 2 + 132) * delta ^ 2 / 315)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.nine_dimensional_hyperoctahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta ^ 8 + 84 * delta ^ 6 + 798 * delta ^ 4 + 1636 * delta ^ 2 + 315) * delta / 2835)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.ten_dimensional_hyperoctahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta ^ 8 + 120 * delta ^ 6 + 1806 * delta ^ 4 + 7180 * delta ^ 2 + 5067) * delta ^ 2 / 14175)
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

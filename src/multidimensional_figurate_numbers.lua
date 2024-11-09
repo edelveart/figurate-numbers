@@ -704,4 +704,21 @@ function multidimensional_figurate_numbers.generalized_k_dimensional_centered_hy
   end)
 end
 
+local function gen_acc_helper_centered_hypertetrahedron(k, n)
+  local a = 0
+  for j = 1, math.abs(n) do
+    a = a + helper_centered_hypertetrahedron(k, j)
+  end
+  return n > 0 and a or -a
+end
+
+function multidimensional_figurate_numbers.generalized_k_dimensional_centered_hypertetrahedron_numbers(k, left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for n = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield(gen_acc_helper_centered_hypertetrahedron(k, n))
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

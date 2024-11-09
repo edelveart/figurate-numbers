@@ -292,4 +292,13 @@ function space_figurate_numbers.tetrahedral_numbers()
   end)
 end
 
+function space_figurate_numbers.octahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      local octahedral = (delta * (2 * delta ^ 2 + 1)) / 3
+      coroutine.yield(octahedral)
+    end
+  end)
+end
+
 return space_figurate_numbers

@@ -747,4 +747,13 @@ function multidimensional_figurate_numbers.generalized_k_dimensional_centered_hy
   end)
 end
 
+function multidimensional_figurate_numbers.generalized_nexus_numbers(k, left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield((delta + 1) ^ (k + 1) - delta ^ (k + 1))
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

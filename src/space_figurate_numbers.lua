@@ -265,4 +265,12 @@ function space_figurate_numbers.square_square_pyramidal_numbers()
   end)
 end
 
+function space_figurate_numbers.tetrahedral_square_pyramidal_number()
+  return coroutine.wrap(function()
+    for _ = 1, math.huge do
+      coroutine.yield(1)
+    end
+  end)
+end
+
 return space_figurate_numbers

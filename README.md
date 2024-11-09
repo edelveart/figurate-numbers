@@ -15,7 +15,7 @@ Following the order of the book, the methods are divided into 3 types according 
 - [x] **TOTAL** = `241` infinite sequences of figurate numbers implemented.
 
 
-# List of implemented sequences
+## List of implemented sequences
 
 * Note that `=` means that you can call the same sequence with different names.
 
@@ -191,6 +191,7 @@ Following the order of the book, the methods are divided into 3 types according 
 86. `generalized_hexagonal_prism_numbers(left_index = 0)`
 
 ### 3. Multidimensional figurate numbers
+
 1.  `pentatope_numbers = hypertetrahedral_numbers = triangulotriangular_numbers`
 2.  `k_dimensional_hypertetrahedron_numbers(k) = k_hypertetrahedron_numbers(k) = regular_k_polytopic_numbers(k) = figurate_numbers_of_order_k(k)`
 3.  `five_dimensional_hypertetrahedron_numbers`
@@ -261,3 +262,10 @@ Following the order of the book, the methods are divided into 3 types according 
 68.  `generalized_k_dimensional_centered_hypertetrahedron_numbers(k, left_index = 0)[provisional symmetry]`
 69.  `generalized_k_dimensional_centered_hyperoctahedron_numbers(k, left_index = 0)[provisional symmetry]`
 70.  `generalized_nexus_numbers(k, left_index = 0) [even or odd dimension only changes sign]`
+
+
+## ⚠️ Remark
+
+Certain sequences mentioned above may necessitate the use of external libraries to maintain precision when working with very large numbers. Without such libraries, there is a risk of precision loss due to the limitations of the environment's standard number representations.
+
+Furthermore, some tests have been intentionally restricted for now to prevent issues arising from the handling of these large values.

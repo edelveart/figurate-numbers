@@ -597,4 +597,91 @@ function multidimensional_figurate_numbers.six_dimensional_centered_hyperoctahed
   end)
 end
 
+function multidimensional_figurate_numbers.generalized_pentatope_numbers(left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield(delta * (delta + 1) * (delta + 2) * (delta + 3) / 24)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_k_dimensional_hypertetrahedron_numbers(k, left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield(rising_factorial(delta, k) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_biquadratic_numbers(left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield(delta ^ 4)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_k_dimensional_hypercube_numbers(k, left_index)
+  k = k or 5
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield(delta ^ k)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_hyperoctahedral_numbers(left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield((delta ^ 2 * (delta ^ 2 + 2)) / 3)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_k_dimensional_hyperoctahedron_numbers(k, left_index)
+  k = k or 5
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      local a = 0
+      for i = 0, (k - 1) do
+        a = a + binomial_coefficient(k - 1, i) * (rising_factorial(delta - i, k) / factorial_iter(k))
+      end
+      coroutine.yield(a)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_hyperdodecahedral_numbers(left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield((delta * (261 * delta ^ 3 - 504 * delta ^ 2 + 283 * delta - 38)) / 2)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_hypericosahedral_numbers(left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield((delta * (145 * delta ^ 3 - 280 * delta ^ 2 + 179 * delta - 38)) / 6)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_polyoctahedral_numbers(left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield(delta ^ 2 * (3 * delta ^ 2 - 4 * delta + 2))
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

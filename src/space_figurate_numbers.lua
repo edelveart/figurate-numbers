@@ -584,4 +584,20 @@ function space_figurate_numbers.centered_dodecagonal_pyramidal_numbers()
   end)
 end
 
+function space_figurate_numbers.hexagonal_prism_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (3 * delta ^ 2 - 3 * delta + 1))
+    end
+  end)
+end
+
+function space_figurate_numbers.mgonal_prism_numbers(m)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (m * delta ^ 2 - m * delta + 2) / 2)
+    end
+  end)
+end
+
 return space_figurate_numbers

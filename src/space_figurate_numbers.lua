@@ -256,4 +256,13 @@ function space_figurate_numbers.square_tetrahedral_numbers()
   end)
 end
 
+function space_figurate_numbers.square_square_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local finite_set = { 1, 4900 }
+    for delta = 0, math.huge do
+      coroutine.yield(finite_set[(delta % 2) + 1])
+    end
+  end)
+end
+
 return space_figurate_numbers

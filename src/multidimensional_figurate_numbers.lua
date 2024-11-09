@@ -579,4 +579,22 @@ function multidimensional_figurate_numbers.k_dimensional_centered_hyperoctahedro
   end)
 end
 
+function multidimensional_figurate_numbers.five_dimensional_centered_hyperoctahedron_numbers()
+  return coroutine.wrap(function()
+    coroutine.yield(1)
+    for n = 1, math.huge do
+      coroutine.yield(ext_int_double_summation(5, n))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_centered_hyperoctahedron_numbers()
+  return coroutine.wrap(function()
+    coroutine.yield(1)
+    for n = 1, math.huge do
+      coroutine.yield(ext_int_double_summation(6, n))
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

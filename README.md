@@ -266,6 +266,6 @@ Following the order of the book, the methods are divided into 3 types according 
 
 ## ⚠️ Remark
 
-Certain sequences mentioned above may necessitate the use of external libraries to maintain precision when working with very large numbers. Without such libraries, there is a risk of precision loss due to the limitations of the environment's standard number representations.
+Certain sequences mentioned above may necessitate the use of external libraries to maintain precision when working with very large figurate numbers. Without such libraries, there is a risk of precision loss due to the limitations of the environment's standard number representations.
 
 Furthermore, some tests have been intentionally restricted for now to prevent issues arising from the handling of these large values.

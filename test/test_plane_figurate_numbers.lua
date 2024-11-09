@@ -1,4 +1,4 @@
-local luaunit = require('helpers.luaunit')
+local luaunit = require('luaunit')
 local plane_figurate_numbers = require('src.plane_figurate_numbers')
 local take = require('helpers.take_function')
 

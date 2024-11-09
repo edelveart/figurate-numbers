@@ -1,13 +1,13 @@
 local function take(coroutine_func, n)
-  local results = {}
-  for i = 1, n do
+  local figurate_numbers_results = {}
+  for _ = 1, n do
     local value = coroutine_func()
     if value then
-      table.insert(results, value)
+      table.insert(figurate_numbers_results, value)
     else
       break
     end
   end
-  return results
+  return figurate_numbers_results
 end
 return take

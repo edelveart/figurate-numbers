@@ -319,4 +319,31 @@ function space_figurate_numbers.icosahedral_numbers()
   end)
 end
 
+function space_figurate_numbers.truncated_tetrahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      local truncated_tetrahedral = (23 * delta ^ 2 - 27 * delta + 10) * delta / 6
+      coroutine.yield(truncated_tetrahedral)
+    end
+  end)
+end
+
+function space_figurate_numbers.truncated_cubic_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      local truncated_cubic = (3 * delta - 2) ^ 3 - ((8 * (delta - 1) * delta * (delta + 1)) / 6)
+      coroutine.yield(truncated_cubic)
+    end
+  end)
+end
+
+function space_figurate_numbers.truncated_octahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      local truncated_octahedral = (16 * delta ^ 3 - 33 * delta ^ 2 + 24 * delta - 6)
+      coroutine.yield(truncated_octahedral)
+    end
+  end)
+end
+
 return space_figurate_numbers

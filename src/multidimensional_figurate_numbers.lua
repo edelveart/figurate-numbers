@@ -684,4 +684,24 @@ function multidimensional_figurate_numbers.generalized_polyoctahedral_numbers(le
   end)
 end
 
+function multidimensional_figurate_numbers.generalized_k_dimensional_mgonal_pyramidal_numbers(k, m, left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for n = (-1 * math.abs(left_index)), math.huge do
+      local pochhammer = pseudo_pochhammer_function(n, k)
+      local result = (pochhammer * ((m - 2) * n - m + k + 2)) / factorial_iter(k)
+      coroutine.yield(result)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.generalized_k_dimensional_centered_hypercube_numbers(k, left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for delta = (-1 * math.abs(left_index)), math.huge do
+      coroutine.yield(delta ^ k + (delta - 1) ^ k)
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

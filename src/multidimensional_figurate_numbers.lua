@@ -406,4 +406,54 @@ function multidimensional_figurate_numbers.six_dimensional_mgonal_pyramidal_numb
   end)
 end
 
+function multidimensional_figurate_numbers.six_dimensional_square_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 6
+    local m = 4
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_pentagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 6
+    local m = 5
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_hexagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 6
+    local m = 6
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_heptagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 6
+    local m = 7
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_octagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 6
+    local m = 8
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

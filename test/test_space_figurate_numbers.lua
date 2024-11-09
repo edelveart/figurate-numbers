@@ -1,4 +1,4 @@
-local luaunit = require('helpers.luaunit')
+local luaunit = require('luaunit')
 local space_figurate_numbers = require('src.space_figurate_numbers')
 local take = require('helpers.take_function')
 

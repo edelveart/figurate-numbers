@@ -229,4 +229,13 @@ function space_figurate_numbers.triacontagonal_pyramidal_numbers()
   end)
 end
 
+function space_figurate_numbers.triangular_tetrahedral_numbers()
+  return coroutine.wrap(function()
+    local finite_set = { 1, 10, 120, 1540, 7140 }
+    for delta = 0, math.huge do
+      coroutine.yield(finite_set[(delta % 5) + 1])
+    end
+  end)
+end
+
 return space_figurate_numbers

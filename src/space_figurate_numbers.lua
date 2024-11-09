@@ -362,4 +362,12 @@ function space_figurate_numbers.centered_cube_numbers()
   end)
 end
 
+function space_figurate_numbers.rhombic_dodecahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (2 * delta ^ 2 - 2 * delta + 1))
+    end
+  end)
+end
+
 return space_figurate_numbers

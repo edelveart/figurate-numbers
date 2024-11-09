@@ -488,4 +488,100 @@ function space_figurate_numbers.centered_truncated_octahedron_numbers()
   end)
 end
 
+function space_figurate_numbers.centered_mgonal_pyramidal_numbers(m)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((m * delta ^ 3 + delta * (6 - m)) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_triangular_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta ^ 2 + 1) / 2)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_square_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta ^ 3 + delta) / 3)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_pentagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((5 * delta ^ 3 + delta) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_hexagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta ^ 3)
+    end
+  end)
+end
+
+space_figurate_numbers.hex_pyramidal_numbers = space_figurate_numbers.centered_hexagonal_pyramidal_numbers
+
+function space_figurate_numbers.centered_heptagonal_pyramidal_numbers()
+  local m = 7
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((m * delta ^ 3 + delta * (6 - m)) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_octagonal_pyramidal_numbers()
+  local m = 8
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((m * delta ^ 3 + delta * (6 - m)) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_nonagonal_pyramidal_numbers()
+  local m = 9
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((m * delta ^ 3 + delta * (6 - m)) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_decagonal_pyramidal_numbers()
+  local m = 10
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((m * delta ^ 3 + delta * (6 - m)) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_hendecagonal_pyramidal_numbers()
+  local m = 11
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((m * delta ^ 3 + delta * (6 - m)) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_dodecagonal_pyramidal_numbers()
+  local m = 12
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((m * delta ^ 3 + delta * (6 - m)) / 6)
+    end
+  end)
+end
+
 return space_figurate_numbers

@@ -464,4 +464,28 @@ function space_figurate_numbers.centered_dodecahedron_numbers()
   end)
 end
 
+function space_figurate_numbers.centered_truncated_tetrahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (7 * delta ^ 2 - 7 * delta + 3) / 3)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_truncated_cube_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (23 * delta ^ 2 - 23 * delta + 3) / 3)
+    end
+  end)
+end
+
+function space_figurate_numbers.centered_truncated_octahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (5 * delta ^ 2 - 5 * delta + 1))
+    end
+  end)
+end
+
 return space_figurate_numbers

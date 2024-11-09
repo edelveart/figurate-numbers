@@ -354,4 +354,12 @@ function space_figurate_numbers.stella_octangula_numbers()
   end)
 end
 
+function space_figurate_numbers.centered_cube_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (delta ^ 2 - delta + 1))
+    end
+  end)
+end
+
 return space_figurate_numbers

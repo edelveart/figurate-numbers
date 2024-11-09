@@ -338,7 +338,72 @@ function multidimensional_figurate_numbers.k_dimensional_mgonal_pyramidal_number
 end
 
 multidimensional_figurate_numbers.mgonal_pyramidal_numbers_of_the_k_2_th_order = multidimensional_figurate_numbers
-.k_dimensional_mgonal_pyramidal_numbers
+    .k_dimensional_mgonal_pyramidal_numbers
 
+function multidimensional_figurate_numbers.five_dimensional_mgonal_pyramidal_numbers(m)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * (delta + 3) * ((m - 2) * delta - m + 7)) / 120)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.five_dimensional_square_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 5
+    local m = 4
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.five_dimensional_pentagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 5
+    local m = 5
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.five_dimensional_hexagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 5
+    local m = 6
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.five_dimensional_heptagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 5
+    local m = 7
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.five_dimensional_octagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local k = 5
+    local m = 8
+    for delta = 1, math.huge do
+      coroutine.yield((pseudo_pochhammer_function(delta, k) * ((m - 2) * delta - m + k + 2)) / factorial_iter(k))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_mgonal_pyramidal_numbers(m)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((delta * (delta + 1) * (delta + 2) * (delta + 3) * (delta + 4) * ((m - 2) * delta - m + 8)) / 720)
+    end
+  end)
+end
 
 return multidimensional_figurate_numbers

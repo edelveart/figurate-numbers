@@ -1,6 +1,6 @@
 # Figurate Numbers in Lua
 
-`figurate_numbers` is the most comprehensive and specialized figurate number module written in `Lua` to date. It implements `241 infinite number sequences` based on the remarkable book
+`figurate_numbers` is the most comprehensive and specialized module for figurate numbers written in `Lua` to date. It implements `241 infinite number sequences` based on the remarkable book
 > [Figurate Numbers](https://books.google.com.pe/books/about/Figurate_Numbers.html?id=ERS7CgAAQBAJ&redir_esc=y)  by Elena Deza and Michel Deza, published in 2012.
 
 This implementation uses **coroutines** in Lua to handle **infinite sequences**. It is intended for use in mathematical projects and with Sonic Pi.

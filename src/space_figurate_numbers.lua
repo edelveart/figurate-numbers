@@ -149,4 +149,84 @@ function space_figurate_numbers.icosagonal_pyramidal_numbers()
   end)
 end
 
+function space_figurate_numbers.icosihenagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (19 * delta - 16) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.icosidigonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (20 * delta - 17) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.icositrigonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (21 * delta - 18) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.icositetragonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (22 * delta - 19) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.icosipentagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (23 * delta - 20) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.icosihexagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (24 * delta - 21) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.icosiheptagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (25 * delta - 22) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.icosioctagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (26 * delta - 23) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.icosinonagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (27 * delta - 24) / 6)
+    end
+  end)
+end
+
+function space_figurate_numbers.triacontagonal_pyramidal_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta * (delta + 1) * (28 * delta - 25) / 6)
+    end
+  end)
+end
+
 return space_figurate_numbers

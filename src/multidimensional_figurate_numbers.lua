@@ -521,7 +521,7 @@ end
 function multidimensional_figurate_numbers.k_dimensional_centered_hypertetrahedron_numbers(k)
   return coroutine.wrap(function()
     for n = 1, math.huge do
-      coroutine.yield(multidimensional_figurate_numbers.acc_helper_centered_hypertetrahedron(k, n))
+      coroutine.yield(acc_helper_centered_hypertetrahedron(k, n))
     end
   end)
 end

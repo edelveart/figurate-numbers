@@ -301,4 +301,13 @@ function space_figurate_numbers.octahedral_numbers()
   end)
 end
 
+function space_figurate_numbers.dodecahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      local dodecahedral = (delta * (3 * delta - 1) * (3 * delta - 2)) / 2
+      coroutine.yield(dodecahedral)
+    end
+  end)
+end
+
 return space_figurate_numbers

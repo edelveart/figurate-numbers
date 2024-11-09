@@ -378,4 +378,15 @@ function space_figurate_numbers.hauy_rhombic_dodecahedral_numbers()
   end)
 end
 
+function space_figurate_numbers.centered_tetrahedron_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * ((delta ^ 2 - delta + 3)) / 3)
+    end
+  end)
+end
+
+space_figurate_numbers.centered_tetrahedral_numbers = space_figurate_numbers.centered_tetrahedron_numbers
+
+
 return space_figurate_numbers

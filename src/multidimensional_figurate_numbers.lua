@@ -721,4 +721,30 @@ function multidimensional_figurate_numbers.generalized_k_dimensional_centered_hy
   end)
 end
 
+local function gen_ext_int_double_summation(k, n)
+  local is_positive_n = n
+  n = math.abs(n)
+  local t = (2) * binomial_coefficient(k, 1) * binomial_coefficient(1, 0)
+  local a = 0
+  for j = 1, (n - 1) do
+    for i = 0, (k - 1) do
+      a = a + (2 ^ (1 + i)) * binomial_coefficient(k, 1 + i) * binomial_coefficient(j, i)
+    end
+  end
+  return is_positive_n > 0 and (1 + t + a) or (1 + t + a) * -1
+end
+
+function multidimensional_figurate_numbers.generalized_k_dimensional_centered_hyperoctahedron_numbers(k, left_index)
+  left_index = left_index or 0
+  return coroutine.wrap(function()
+    for n = (-1 * math.abs(left_index)), math.huge do
+      if n == 1 then
+        coroutine.yield(1)
+      elseif n ~= 0 then
+        coroutine.yield(gen_ext_int_double_summation(k, n))
+      end
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

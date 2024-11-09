@@ -456,4 +456,46 @@ function multidimensional_figurate_numbers.six_dimensional_octagonal_pyramidal_n
   end)
 end
 
+function multidimensional_figurate_numbers.centered_biquadratic_numbers()
+  return coroutine.wrap(function()
+    local a = 0
+    for delta = 1, math.huge do
+      a = a + delta ^ 4 - (delta - 2) ^ 4
+      coroutine.yield(a + 1)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.k_dimensional_centered_hypercube_numbers(k)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta ^ k + (delta - 1) ^ k)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.five_dimensional_centered_hypercube_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta ^ 5 + (delta - 1) ^ 5)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_centered_hypercube_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta ^ 6 + (delta - 1) ^ 6)
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.centered_polytope_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((5 * delta ^ 4 - 10 * delta ^ 3 + 55 * delta ^ 2 - 50 * delta + 24) / 24)
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

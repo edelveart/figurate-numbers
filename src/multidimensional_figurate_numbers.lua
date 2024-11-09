@@ -214,4 +214,20 @@ function multidimensional_figurate_numbers.ten_dimensional_hyperoctahedron_numbe
   end)
 end
 
+function multidimensional_figurate_numbers.k_dimensional_hyperoctahedron_numbers(k)
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      local a = 0
+      for i = 0, k - 1 do
+        a = a + binomial_coefficient(k - 1, i) * (rising_factorial(delta - i, k) / factorial_iter(k))
+      end
+      coroutine.yield(a)
+    end
+  end)
+end
+
+multidimensional_figurate_numbers.k_cross_polytope_numbers = multidimensional_figurate_numbers
+.k_dimensional_hyperoctahedron_numbers
+
+
 return multidimensional_figurate_numbers

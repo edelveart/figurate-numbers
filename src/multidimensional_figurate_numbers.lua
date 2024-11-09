@@ -559,4 +559,24 @@ function multidimensional_figurate_numbers.nexus_numbers(k)
   end)
 end
 
+local function ext_int_double_summation(k, n)
+  local t = (2 ^ 1) * binomial_coefficient(k, 1) * binomial_coefficient(1, 0)
+  local a = 0
+  for j = 1, n - 1 do
+    for i = 0, k - 1 do
+      a = a + (2 ^ (1 + i)) * binomial_coefficient(k, 1 + i) * binomial_coefficient(j, i)
+    end
+  end
+  return 1 + t + a
+end
+
+function multidimensional_figurate_numbers.k_dimensional_centered_hyperoctahedron_numbers(k)
+  return coroutine.wrap(function()
+    coroutine.yield(1)
+    for n = 1, math.huge do
+      coroutine.yield(ext_int_double_summation(k, n))
+    end
+  end)
+end
+
 return multidimensional_figurate_numbers

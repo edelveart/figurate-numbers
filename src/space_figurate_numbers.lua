@@ -273,4 +273,14 @@ function space_figurate_numbers.tetrahedral_square_pyramidal_number()
   end)
 end
 
+function space_figurate_numbers.cubic_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield(delta ^ 3)
+    end
+  end)
+end
+
+space_figurate_numbers.perfect_cube_numbers = space_figurate_numbers.cubic_numbers
+
 return space_figurate_numbers

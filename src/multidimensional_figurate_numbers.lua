@@ -498,7 +498,7 @@ function multidimensional_figurate_numbers.centered_polytope_numbers()
   end)
 end
 
-function multidimensional_figurate_numbers.helper_centered_hypertetrahedron(k, n)
+local function helper_centered_hypertetrahedron(k, n)
   if n == 1 then return 1 end
   local t = binomial_coefficient(k + 1, k)
   if n == 2 then return t end
@@ -509,10 +509,10 @@ function multidimensional_figurate_numbers.helper_centered_hypertetrahedron(k, n
   return tau
 end
 
-function multidimensional_figurate_numbers.acc_helper_centered_hypertetrahedron(k, n)
+local function acc_helper_centered_hypertetrahedron(k, n)
   local a = 0
   for j = 1, n do
-    a = a + multidimensional_figurate_numbers.helper_centered_hypertetrahedron(k, j)
+    a = a + helper_centered_hypertetrahedron(k, j)
   end
   return a
 end
@@ -521,6 +521,40 @@ function multidimensional_figurate_numbers.k_dimensional_centered_hypertetrahedr
   return coroutine.wrap(function()
     for n = 1, math.huge do
       coroutine.yield(multidimensional_figurate_numbers.acc_helper_centered_hypertetrahedron(k, n))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.five_dimensional_centered_hypertetrahedron_numbers()
+  return coroutine.wrap(function()
+    for n = 1, math.huge do
+      coroutine.yield(acc_helper_centered_hypertetrahedron(5, n))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.six_dimensional_centered_hypertetrahedron_numbers()
+  return coroutine.wrap(function()
+    for n = 1, math.huge do
+      coroutine.yield(acc_helper_centered_hypertetrahedron(6, n))
+    end
+  end)
+end
+
+function multidimensional_figurate_numbers.centered_hyperoctahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta ^ 4 - 4 * delta ^ 3 + 10 * delta ^ 2 - 8 * delta + 3) / 3)
+    end
+  end)
+end
+
+multidimensional_figurate_numbers.orthoplex_numbers = multidimensional_figurate_numbers.centered_hyperoctahedral_numbers
+
+function multidimensional_figurate_numbers.nexus_numbers(k)
+  return coroutine.wrap(function()
+    for delta = 0, math.huge do
+      coroutine.yield((delta + 1) ^ (k + 1) - delta ^ (k + 1))
     end
   end)
 end

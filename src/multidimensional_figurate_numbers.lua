@@ -108,7 +108,7 @@ function multidimensional_figurate_numbers.six_dimensional_hypercube_numbers()
   end)
 end
 
-function multidimensional_figurate_numbers.hypoctahedral_numbers()
+function multidimensional_figurate_numbers.hyperoctahedral_numbers()
   return coroutine.wrap(function()
     for delta = 1, math.huge do
       coroutine.yield((delta ^ 2 * (delta ^ 2 + 2)) / 3)
@@ -116,9 +116,10 @@ function multidimensional_figurate_numbers.hypoctahedral_numbers()
   end)
 end
 
-multidimensional_figurate_numbers.hexadecachoron_numbers = multidimensional_figurate_numbers.hypoctahedral_numbers
-multidimensional_figurate_numbers.four_cross_polytope_numbers = multidimensional_figurate_numbers.hypoctahedral_numbers
-multidimensional_figurate_numbers.four_orthoplex_numbers = multidimensional_figurate_numbers.hypoctahedral_numbers
+multidimensional_figurate_numbers.hexadecachoron_numbers = multidimensional_figurate_numbers.hyperoctahedral_numbers
+multidimensional_figurate_numbers.four_cross_polytope_numbers = multidimensional_figurate_numbers
+    .hyperoctahedral_numbers
+multidimensional_figurate_numbers.four_orthoplex_numbers = multidimensional_figurate_numbers.hyperoctahedral_numbers
 
 
 function multidimensional_figurate_numbers.hypericosahedral_numbers()

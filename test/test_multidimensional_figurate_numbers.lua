@@ -322,5 +322,166 @@ function TestFigurateNumbers:test_nexus_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+-----------------
+function TestFigurateNumbers:test_k_dimensional_centered_hyperoctahedron_numbers()
+  local expected = { 1, 65 }
+  local result = take(multidimensional_figurate_numbers.k_dimensional_centered_hyperoctahedron_numbers(32), 2)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_centered_hyperoctahedron_numbers()
+  local expected = { 1, 11 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_centered_hyperoctahedron_numbers(), 2)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_centered_hyperoctahedron_numbers()
+  local expected = { 1, 13 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_centered_hyperoctahedron_numbers(), 2)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_pentatope_numbers()
+  local expected = {
+    3060, 2380, 1820, 1365, 1001, 715, 495, 330, 210, 126, 70, 35, 15, 5, 1, 0,
+    0, 0, 0, 1, 5, 15, 35, 70, 126, 210, 330, 495, 715, 1001, 1365, 1820, 2380,
+    3060, 3876, 4845, 5985, 7315, 8855, 10626
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_pentatope_numbers(18), 40)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_k_dimensional_hypertetrahedron_numbers()
+  local expected = {
+    -100947, -26334, -5985, -1140, -171, -18, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1, 18, 171, 1140, 5985, 26334, 100947, 346104,
+    1081575, 3124550, 8436285, 21474180, 51895935
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_k_dimensional_hypertetrahedron_numbers(17, 23), 37)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_biquadratic_numbers()
+  local expected = {
+    0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000, 14641, 20736, 28561,
+    38416, 50625, 65536, 83521, 104976, 130321
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_biquadratic_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_k_dimensional_hypercube_numbers()
+  local expected = {
+    -74615470927590710561908487, -32064977213018365645815808, -13248496640331026125580781,
+    -5242880000000000000000000, -1978419655660313589123979, -708235345355337676357632,
+    -239072435685151324847153, -75557863725914323419136, -22168378200531005859375,
+    -5976303958948914397184, -1461920290375446110677, -319479999370622926848,
+    -61159090448414546291, -10000000000000000000, -1350851717672992089, -144115188075855872,
+    -11398895185373143, -609359740010496, -19073486328125, -274877906944, -1162261467,
+    -524288, -1, 0, 1, 524288, 1162261467, 274877906944, 19073486328125, 609359740010496,
+    11398895185373143, 144115188075855872, 1350851717672992089, 10000000000000000000,
+    61159090448414546291, 319479999370622926848, 1461920290375446110677, 5976303958948914397184,
+    22168378200531005859375, 75557863725914323419136, 239072435685151324847153,
+    708235345355337676357632, 1978419655660313589123979, 5242880000000000000000000,
+    13248496640331026125580781
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_k_dimensional_hypercube_numbers(19, 23), 45)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_hyperoctahedral_numbers()
+  local expected = {
+    0, 1, 8, 33, 96, 225, 456, 833, 1408, 2241, 3400, 4961, 7008, 9633, 12936,
+    17025, 22016, 28033, 35208, 43681
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_hyperoctahedral_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_k_dimensional_hyperoctahedron_numbers()
+  local expected = {
+    15671921130497, 8025697116448, 3998179870209, 1933232552320, 905007786497,
+    409008911904, 177880832001, 74174404608, 29532022785, 11172756000, 3994294785,
+    1340645760, 419239425, 121040160, 31910913, 7579136, 1594369, 290592, 44545,
+    5504, 513, 32, 1, 0, 1, 32, 513, 5504, 44545, 290592, 1594369, 7579136, 31910913,
+    121040160, 419239425, 1340645760, 3994294785, 11172756000, 29532022785, 74174404608,
+    177880832001, 409008911904, 905007786497, 1933232552320, 3998179870209
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_k_dimensional_hyperoctahedron_numbers(16, 23), 45)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_hyperdodecahedral_numbers()
+  local expected = {
+    22952980, 18786801, 15215220, 12178783, 9621168, 7489185, 5732776, 4305015,
+    3162108, 2263393, 1571340, 1051551, 672760, 406833, 228768, 116695, 51876,
+    18705, 4708, 543, 0, 1, 600, 4983, 19468, 53505, 119676, 233695, 414408, 683793,
+    1066960, 1592151, 2290740, 3197233, 4349268, 5787615, 7556176, 9701985, 12275208,
+    15329143
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_hyperdodecahedral_numbers(20), 40)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_hypericosahedral_numbers()
+  local expected = {
+    4252060, 3480401, 2818860, 2256427, 1782672, 1387745, 1062376, 797875,
+    586132, 419617, 291380, 195051, 124840, 75537, 42512, 21715, 9676, 3505,
+    892, 107, 0, 1, 120, 947, 3652, 9985, 22276, 43435, 76952, 126897, 197920,
+    295251, 424700, 592657, 806092, 1072555, 1400176, 1797665, 2274312, 2839987
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_hypericosahedral_numbers(20), 40)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_polyoctahedral_numbers()
+  local expected = {
+    512800, 419121, 338904, 270793, 213504, 165825, 126616, 94809, 69408, 49489,
+    34200, 22761, 14464, 8673, 4824, 2425, 1056, 369, 88, 9, 0, 1, 24, 153, 544,
+    1425, 3096, 5929, 10368, 16929, 26200, 38841, 55584, 77233, 104664, 138825,
+    180736, 231489, 292248, 364249
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_polyoctahedral_numbers(20), 40)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_k_dimensional_mgonal_pyramidal_numbers()
+  local expected = {
+    -1770, -636, -188, -41, -5, 0, 0, 0, 0, 0, 0, 1, 13, 76, 300, 930, 2442, 5676,
+    12012, 23595
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_k_dimensional_mgonal_pyramidal_numbers(7, 8, 10), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_k_dimensional_centered_hypercube_numbers()
+  local expected = {
+    -29487171, -14782969, -6880121, -2920695, -1103479, -358061, -94509, -18571,
+    -2315, -129, -1, 1, 129, 2315, 18571, 94509, 358061, 1103479, 2920695, 6880121
+  }
+  local result = take(multidimensional_figurate_numbers.generalized_k_dimensional_centered_hypercube_numbers(7, 10), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_k_dimensional_centered_hypertetrahedron_numbers()
+  local expected = {}
+  local result = take(
+    multidimensional_figurate_numbers.generalized_k_dimensional_centered_hypertetrahedron_numbers(6, 10), 0)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_k_dimensional_centered_hyperoctahedron_numbers()
+  local expected = {}
+  local result = take(
+    multidimensional_figurate_numbers.generalized_k_dimensional_centered_hyperoctahedron_numbers(7, 15), 0)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_generalized_nexus_numbers()
+  local expected = {}
+  local result = take(multidimensional_figurate_numbers.generalized_nexus_numbers(23, 17), 0)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

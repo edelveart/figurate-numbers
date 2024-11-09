@@ -370,4 +370,12 @@ function space_figurate_numbers.rhombic_dodecahedral_numbers()
   end)
 end
 
+function space_figurate_numbers.hauy_rhombic_dodecahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      coroutine.yield((2 * delta - 1) * (8 * delta ^ 2 - 14 * delta + 7))
+    end
+  end)
+end
+
 return space_figurate_numbers

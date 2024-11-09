@@ -262,5 +262,35 @@ function TestFigurateNumbers:test_six_dimensional_octagonal_pyramidal_numbers()
   luaunit.assertEquals(result, expected)
 end
 
+function TestFigurateNumbers:test_centered_biquadratic_numbers()
+  local expected = { 1, 17, 97, 337, 881, 1921, 3697, 6497, 10657, 16561, 24641, 35377, 49297, 66977, 89041, 116161, 149057, 188497, 235297, 290321 }
+  local result = take(multidimensional_figurate_numbers.centered_biquadratic_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_k_dimensional_centered_hypercube_numbers()
+  local expected = { 1, 524289, 1162785755, 276040168411, 19348364235069, 628433226338621, 12008254925383639, 155514083261229015, 1494966905748847961, 11350851717672992089 }
+  local result = take(multidimensional_figurate_numbers.k_dimensional_centered_hypercube_numbers(19), 10)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_five_dimensional_centered_hypercube_numbers()
+  local expected = { 1, 33, 275, 1267, 4149, 10901, 24583, 49575, 91817, 159049, 261051, 409883, 620125, 909117, 1297199, 1807951, 2468433, 3309425, 4365667, 5676099 }
+  local result = take(multidimensional_figurate_numbers.five_dimensional_centered_hypercube_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_six_dimensional_centered_hypercube_numbers()
+  local expected = { 1, 65, 793, 4825, 19721, 62281, 164305, 379793, 793585, 1531441, 2771561, 4757545, 7812793, 12356345, 18920161, 28167841, 40914785, 58149793, 81058105, 111045881 }
+  local result = take(multidimensional_figurate_numbers.six_dimensional_centered_hypercube_numbers(), 20)
+  luaunit.assertEquals(result, expected)
+end
+
+function TestFigurateNumbers:test_centered_polytope_numbers()
+  local expected = { 1, 6, 21, 56, 126, 251, 456, 771, 1231, 1876, 2751, 3906, 5396, 7281, 9626, 12501, 15981, 20146, 25081, 30876, 37626, 45431, 54396, 64631, 76251, 89376, 104131, 120646, 139056, 159501, 182126, 207081, 234521, 264606, 297501, 333376, 372406, 414771, 460656, 510251, 563751, 621356, 683271, 749706, 820876, 897001, 978306, 1065021, 1157381, 1255626, 1360001, 1470756, 1588146, 1712431, 1843876, 1982751, 2129331, 2283896, 2446731, 2618126, 2798376, 2987781, 3186646, 3395281, 3614001, 3843126, 4082981, 4333896, 4596206, 4870251, 5156376, 5454931, 5766271, 6090756, 6428751, 6780626, 7146756, 7527521, 7923306, 8334501 }
+  local result = take(multidimensional_figurate_numbers.centered_polytope_numbers(), 80)
+  luaunit.assertEquals(result, expected)
+end
+
 os.exit(luaunit.LuaUnit.run())
 return TestFigurateNumbers

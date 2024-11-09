@@ -238,4 +238,13 @@ function space_figurate_numbers.triangular_tetrahedral_numbers()
   end)
 end
 
+function space_figurate_numbers.triangular_square_pyramidal_numbers()
+  return coroutine.wrap(function()
+    local finite_set = { 1, 55, 91, 208335 }
+    for delta = 0, math.huge do
+      coroutine.yield(finite_set[(delta % 4) + 1])
+    end
+  end)
+end
+
 return space_figurate_numbers

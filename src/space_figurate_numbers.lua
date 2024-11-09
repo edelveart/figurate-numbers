@@ -283,4 +283,13 @@ end
 
 space_figurate_numbers.perfect_cube_numbers = space_figurate_numbers.cubic_numbers
 
+function space_figurate_numbers.tetrahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      local tetrahedral = (delta * (delta + 1) * (delta + 2)) / 6
+      coroutine.yield(tetrahedral)
+    end
+  end)
+end
+
 return space_figurate_numbers

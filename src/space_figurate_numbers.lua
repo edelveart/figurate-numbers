@@ -310,4 +310,13 @@ function space_figurate_numbers.dodecahedral_numbers()
   end)
 end
 
+function space_figurate_numbers.icosahedral_numbers()
+  return coroutine.wrap(function()
+    for delta = 1, math.huge do
+      local icosahedral = (delta * (5 * delta ^ 2 - 5 * delta + 2)) / 2
+      coroutine.yield(icosahedral)
+    end
+  end)
+end
+
 return space_figurate_numbers
